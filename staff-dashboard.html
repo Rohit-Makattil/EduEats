@@ -8,18 +8,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="page">
+<body class="dashboard-page">
     <canvas id="background-canvas"></canvas>
     <header>
-        <img src="https://vesit.ves.ac.in/wp-content/uploads/2023/02/VESIT-Logo.png" alt="VESIT Logo" class="logo">
+        <img src="https://vesit.ves.ac.in/website_tour/skin/Image_A0096B4D_B18D_2BFC_41B8_ED811B459B6B_mobile_en.png?v=1656663582984" alt="VESIT Logo" class="logo">
         <nav>
             <ul>
                 <li><a href="home.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="order-status.html">Order Status</a></li>
                 <li id="dashboard-link"></li>
-                <li><button id="logout"><i class="fas fa-sign-out-alt"></i> Logout</button></li>
-                <li><button id="theme-toggle"><i class="fas fa-moon"></i> Toggle Theme</button></li>
+                <li><button id="logout" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button></li>
+                <li>
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch" for="theme-checkbox">
+                            <input type="checkbox" id="theme-checkbox">
+                            <div class="slider round">
+                                <i class="fas fa-sun"></i>
+                                <i class="fas fa-moon"></i>
+                            </div>
+                        </label>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
