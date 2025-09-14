@@ -38,6 +38,8 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(74, 182, 255, 0.7)), url('./assets/vesit.png') no-repeat center center fixed;
+    background-size: cover;
 }
 
 .page {
@@ -58,16 +60,7 @@ body {
 }
 
 .login-page::before, .dashboard-page::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(74, 182, 255, 0.7)), url('./vesit.png') no-repeat center center fixed;
-    background-size: cover;
-    filter: blur(10px);
-    z-index: 0;
+    display: none;
 }
 
 header, main, footer {
@@ -82,6 +75,114 @@ header {
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
+}
+
+.site-footer {
+    background: linear-gradient(90deg, var(--accent-color), var(--secondary-color));
+    color: white;
+    padding: 2.5em 1.5em 1.5em;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+    margin-top: auto;
+    width: 100%;
+    position: relative;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5em;
+    padding: 1.5em 0;
+}
+
+.footer-info h3 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: white;
+    font-weight: 700;
+}
+
+.footer-info p {
+    margin: 0.7em 0;
+    font-size: 1.1em;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.footer-links h4, .footer-social h4 {
+    font-size: 1.5em;
+    margin-bottom: 1.2em;
+    color: white;
+    font-weight: 600;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 0.8em;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    opacity: 0.9;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.footer-links ul li a:hover {
+    color: var(--complementary-color);
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+.footer-social .social-icons {
+    display: flex;
+    gap: 1.5em;
+}
+
+.footer-social .social-icons a {
+    color: white;
+    font-size: 1.8em;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    opacity: 0.9;
+}
+
+.footer-social .social-icons a:hover {
+    color: var(--complementary-color);
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1) translateY(-3px);
+    opacity: 1;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 2em 0 1em;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    margin-top: 2em;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 500;
+    opacity: 0.9;
 }
 
 .logo {
@@ -118,6 +219,9 @@ header nav ul li a, header nav ul li button {
     padding: 0.6em 1.2em;
     border-radius: 8px;
     transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
 }
 
 header nav ul li a:hover, header nav ul li button:hover {
@@ -295,6 +399,11 @@ main {
     border-radius: 40px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: pulse 2.5s infinite ease-in-out;
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
 }
 
 .hero-btn:hover {
@@ -635,6 +744,10 @@ h2 {
     background: linear-gradient(90deg, var(--accent-color), var(--complementary-color));
     padding: 0.8em 1.6em;
     border-radius: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .download-pdf:hover {
@@ -722,6 +835,10 @@ h2 {
     margin-top: 1.5em;
     padding: 0.8em 1.6em;
     border-radius: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .cancel-order:hover {
@@ -1036,6 +1153,10 @@ h2 {
     background: linear-gradient(90deg, var(--accent-color), var(--complementary-color));
     padding: 0.8em 1.6em;
     border-radius: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 #place-order:hover {
@@ -1093,6 +1214,10 @@ h2 {
     background: linear-gradient(90deg, var(--accent-color), var(--complementary-color));
     padding: 0.8em 1.6em;
     border-radius: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .popup-content .btn:hover {
@@ -1332,9 +1457,9 @@ h2 {
     background: var(--glass-bg);
     box-shadow: var(--card-shadow);
     z-index: 200;
+    transition: all 0.6s ease;
 }
 
-/* Enhanced styles for admin dashboard */
 .table-controls {
     display: flex;
     gap: 1em;
@@ -1530,6 +1655,16 @@ h2 {
     #admin-order-table .action-btn {
         font-size: 1em;
     }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2em;
+    }
+
+    .footer-social .social-icons {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1619,5 +1754,9 @@ h2 {
 
     .items-grid {
         grid-template-columns: 1fr;
+    }
+
+    .site-footer {
+        padding: 2em 1em 1em;
     }
 }
